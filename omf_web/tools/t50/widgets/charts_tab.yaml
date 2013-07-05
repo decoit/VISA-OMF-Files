@@ -1,0 +1,18 @@
+
+
+
+# Simple tab showing a line chart with supporting table
+#
+
+widget:
+  id: main
+  name: Main
+  top_level: true
+  priority: 900
+  type: layout/tabbed
+  widgets: 
+
+    - name: Attack
+      type: data/table2
+      data_source: 
+        name: t50

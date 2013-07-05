@@ -1,0 +1,51 @@
+
+
+
+# Simple tab showing a line chart with supporting table
+#
+
+widget:
+  id: main
+  name: Main
+  top_level: true
+  priority: 900
+  type: layout/tabbed
+  widgets: 
+
+    - name: Table
+      type: data/table2
+      data_source:
+        name: otg2
+    
+    - name: UDP out
+      type: data/line_chart3
+      data_source: 
+        name: otg2
+      mapping:
+        x_axis: 
+          property: seq_no
+        y_axis: 
+          property: pkt_length
+#        group_by: link
+      axis:
+        x:
+          legend: Sequence number
+        y:
+          legend: Paket legth (Byte)
+        
+    - name: UDP in
+      type: data/line_chart3
+      data_source:
+        name: otr2
+      mapping:
+        x_axis:
+         property: seq_no
+        y_axis:
+          property: pkt_length
+#        group_by: link
+      axis:
+        x:
+          legend: Sequence Number
+        y:
+          legend: Paket length (Byte)
+

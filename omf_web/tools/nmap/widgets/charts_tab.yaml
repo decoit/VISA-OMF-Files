@@ -1,0 +1,30 @@
+# Simple tab showing a line chart with supporting table
+#
+
+widget:
+  id: main
+  name: Main
+  top_level: true
+  priority: 900
+  type: layout/tabbed
+  widgets: 
+    
+    - name: Ping Scan
+      type: data/table2
+      data_source: 
+        name: nmap_ping
+
+    - name: Port Scan
+      type: data/table2
+      data_source:
+        name: nmap_port
+
+    - name: Services
+      type: data/table2
+      data_source:
+        name: nmap_service
+
+    - name: OS Scan
+      type: text
+      content:
+        url: file:nmap:fingerprint.md
