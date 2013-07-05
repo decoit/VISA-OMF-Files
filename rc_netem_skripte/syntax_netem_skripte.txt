@@ -1,0 +1,21 @@
+Syntax der Scripte zur einfachen Steuerung von netem:
+
+netem_create_root.sh [Interface]
+
+
+netem_remove_note.sh [Interface]
+
+
+netem_set_latency.sh [Interface] [Latenz in ms] [Variation in ms]
+
+
+netem_set_packet_loss.sh [Interface] [Verlust in X.X%] [Korrelation in X.X%]
+
+
+netem_set_packet_duplicate.sh [Interface] [Anzahl in X.X%]
+
+
+netem_set_packet_corrupt.sh [Interface] [Anzahl in X.X%]
+
+
+netem_set_packet_reorder.sh [Interface] [Latenz in ms] [Anzahl Pakete X.X%]
